@@ -9,7 +9,7 @@ const connect = () => {
   });
   conn.on('connect', () => {
     console.log('Successfully connected to game server');
-    conn.write("Name: TST");
+    conn.write("Name: RUN");
     // setInterval(()=>{
     //   conn.write("Move: up");
     // }, 50)
@@ -18,7 +18,7 @@ const connect = () => {
     console.log('Server response:', data);
   });
   conn.setEncoding('utf8');
-  
+
   return conn;
 };
 
