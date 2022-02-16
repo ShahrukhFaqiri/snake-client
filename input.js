@@ -12,16 +12,24 @@ const setupInput = (conn) => {
 const handleUserInput = (key) => {
   switch (key) {
     case 'w':
-      connection.write('Move: up');
+      setInterval(() => {
+        connection.write('Move: up');
+      });
       break;
     case 'a':
-      connection.write('Move: left');
+      setInterval(() => {
+        connection.write('Move: left');
+      });
       break;
     case 's':
-      connection.write('Move: down');
+      setInterval(() => {
+        connection.write('Move: down');
+      });
       break;
     case 'd':
-      connection.write('Move: right');
+      setInterval(() => {
+        connection.write('Move: right');
+      });
       break;
     case 'k':
       connection.write('Say: Say Message');
