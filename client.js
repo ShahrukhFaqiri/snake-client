@@ -9,10 +9,7 @@ const connect = () => {
   });
   conn.on('connect', () => {
     console.log('Successfully connected to game server');
-    conn.write("Name: RUN");
-    // setInterval(()=>{
-    //   conn.write("Move: up");
-    // }, 50)
+    // conn.write("Name: RUN");
   });
   conn.on('data', (data) => {
     console.log('Server response:', data);
@@ -21,5 +18,7 @@ const connect = () => {
 
   return conn;
 };
+
+
 
 module.exports = { connect };
