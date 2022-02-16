@@ -8,9 +8,10 @@ const connect = () => {
   });
   conn.on('connect', () => {
     console.log('Successfully connected to game server');
-  });
-  conn.on('connect', () => {
     conn.write("Name: TST");
+    // setInterval(()=>{
+    //   conn.write("Move: up");
+    // }, 50)
   });
   conn.on('data', (data) => {
     console.log('Server response:', data);
